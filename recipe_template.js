@@ -94,6 +94,19 @@ module.exports = {
           </ul>
         </fieldset>
       ` : ''}
+      ${!!settings.tags ? `
+        <fieldset id="tags" class="widget">
+          <legend>Tags</legend>
+          <ul id="tags>
+            ${settings.tags.map(item => `
+              <li class="tags">
+                <span class="tag-name"><a href="tags/${item}">${item}</a></span>
+              </li>
+            `).join('')}
+          </ul>
+        </fieldset>
+      ` : ''}
+      
     </body>
   </html>
   `
