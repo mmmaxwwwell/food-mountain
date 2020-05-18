@@ -28,6 +28,7 @@ app.get('/search', (req, res) => {
 app.get('/list', (req, res) => {
   console.log('list')
   const output = build()
+  console.log(output)
   res.send(list_template.render(output.metadata).toString())
 })
 

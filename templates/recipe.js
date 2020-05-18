@@ -8,14 +8,8 @@ module.exports = {
     <head>
       ${commonHeadCss}
       <style>
-      #allergies{
-        display:flex;
-      }
-
-      .allergen{
-        width:33%;
-        margin:0;
-        padding:0;
+      #allergens-ul{
+        column-count: 2;
       }
       </style>
     </head>
@@ -40,11 +34,21 @@ module.exports = {
       </fieldset>
       <fieldset id="allergies" class="widget">
         <legend>Allergens and Intolerances</legend>
-        ${allergens.map(elem => `
-          <div class="allergen">
-            ${elem.icon} ${elem.name} 
-          </div>  
-        `).join('')}
+        <ul id="allergens-ul">
+          ${allergens.map(elem => `
+          <li class="allergen">
+          <label for="allergen-${elem.id}">
+            <input 
+              disabled
+              ${settings.tags.includes(`${elem.id}`) ? 'checked' : ''}
+              type="checkbox" 
+              name="allergen-${elem.id}"
+              id="allergen-${elem.id}">
+                ${elem.icon} ${elem.name}
+              </input>
+          </label>
+          `).join('')}
+        </ul>
       </fieldset>
       ${!!settings.equipment && !!settings.equipment.required ? `
         <fieldset id="required-equipment" class="widget">
@@ -52,8 +56,8 @@ module.exports = {
           <ul id="required-equipment-ul>
             ${settings.equipment.required.map(item => `
               <li class="equipment-container">
-                <span class="equipment-name"><a href="${item.link}">${item.name}</a></span>
-                <span class="equipment-plug">${item.plug}</span>
+                <span class="equipment-name"><a target="_blank" href="${item.link}">${item.name}</a></span>
+                <span class="equipment-plug">${item.plug || ''}</span>
               </li>
             `).join('')}
           </ul>
@@ -65,26 +69,13 @@ module.exports = {
           <ul id="recommended-equipment-ul>
             ${settings.equipment.recommended.map(item => `
               <li class="equipment-container">
-                <span class="equipment-name"><a href="${item.link}">${item.name}</a></span>
-                <span class="equipment-plug">${item.plug}</span>
+                <span class="equipment-name"><a target="_blank" href="${item.link}">${item.name}</a></span>
+                <span class="equipment-plug">${item.plug || ''}</span>
               </li>
             `).join('')}
           </ul>
         </fieldset>
       ` : ''}
-      ${!!settings.tags ? `
-        <fieldset id="tags" class="widget">
-          <legend>Tags</legend>
-          <ul id="tags>
-            ${settings.tags.map(item => `
-              <li class="tags">
-                <span class="tag-name"><a href="tags/${item}">${item}</a></span>
-              </li>
-            `).join('')}
-          </ul>
-        </fieldset>
-      ` : ''}
-      
     </body>
   </html>
   `

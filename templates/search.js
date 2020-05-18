@@ -16,7 +16,7 @@ module.exports = {
     });
 
     allergens.forEach(allergen => {
-      tags.delete(`${allergen.id}-free`)
+      tags.delete(`${allergen.id}`)
     })
 
     const metadata = settings.map((elem) => {return {title: elem.title, id: elem.id, description: elem.description, ingredients: elem.ingredients.map(elem2 => elem2.item), tags: elem.tags}})
@@ -129,7 +129,7 @@ module.exports = {
             if($(id).length){
               console.log({event:'allergen-check', allergen})
               results.forEach(elem => {
-                if(!elem.tags.includes(allergen.id + '-free')){
+                if(!elem.tags.includes(allergen.id)){
                   const index = results.indexOf(elem)
                   results.splice(index, 1)
                 }
@@ -164,7 +164,7 @@ module.exports = {
                   type="checkbox" 
                   name="allergen-${elem.id}"
                   id="allergen-${elem.id}">
-                    ${elem.icon} ${elem.name} free
+                    ${elem.icon} ${elem.name}
                   </input>
               </label>
               `).join('')}

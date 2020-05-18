@@ -118,5 +118,19 @@ module.exports = {
       }
     ]
   },
-  tags: ["instant-pot", "vegan", "vegetarian", "gluten-free", "soy-free", "tree-nut-free"]
+  tags: [
+    "instant-pot",
+    "vegan",
+    "vegetarian",
+    "gluten-free",
+    "soy-free",
+    "tree-nut-free",
+    "shellfish-free",
+    "milk-free",
+    "egg-free",
+    "meat-free",
+    "poultry-free",
+    "fish-free",
+    "peanut-free",
+  ]
 }

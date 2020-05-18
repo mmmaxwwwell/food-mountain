@@ -5,7 +5,7 @@ const { readdirSync, writeFileSync} = require('fs')
 const build = (writeFile = false) => {
   const recipes = readdirSync('./recipes')
   console.log({event:'recipes-list', recipes})
-  const id = 0
+  let id = 0
   let metadata = []
   recipes.forEach(elem => {
     const settings = require(`./recipes/${elem}`)
@@ -18,6 +18,7 @@ const build = (writeFile = false) => {
       ingredients: settings.ingredients,
       tags: settings.tags
     })
+    id++
   })
   
   const listTemplateRendered = list_template.render(metadata)
