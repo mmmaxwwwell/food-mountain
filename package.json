@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "dev": "npx nodemon ./dev.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "homepage": "https://github.com/mmmaxwwwell/codename-food-mountain#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

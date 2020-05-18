@@ -1,35 +1,13 @@
+const commonHeadCss = require('../css/common/head')
+const allergens = require('../css/common/allergens')
 let title, description, instructions, ingredients
-
-let allergens = [
-  { name: "Egg", icon: "🥚"},
-  { name: "Milk" , icon: "🥛"},
-  { name: "Peanut" , icon: "🥜"},
-  { name: "Shellfish" , icon: "🦀"},
-  { name: "Soy", icon: "🍆"},
-  { name: "Wheat", icon: "🌾"},
-  { name: "Tree Nuts", icon: "🌳"}
-]
 
 module.exports = {
   render: (settings) => `
   <html>
     <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      ${commonHeadCss}
       <style>
-      h1 {
-        margin:0;
-      }
-
-      body{ 
-        font-family:Arial, Helvetica, sans-serif;
-      }
-
-      ul{
-        list-style-type:none;
-        margin:0;
-        padding:0;
-      }
-
       #allergies{
         display:flex;
       }

@@ -1,5 +1,5 @@
-const recipe_template = require('./recipe_template')
-const list_template = require('./list_template')
+const recipe_template = require('./templates/recipe')
+const list_template = require('./templates/list')
 const { readdirSync, writeFileSync} = require('fs')
 
 const build = (writeFile = false) => {

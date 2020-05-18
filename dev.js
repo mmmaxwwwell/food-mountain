@@ -1,19 +1,28 @@
 const express = require('express')
-const template = require('./recipe_template')
-const list_template = require('./list_template')
+const template = require('./templates/recipe')
+const submit_template = require('./templates/submit')
+const search_template = require('./templates/search')
+const list_template = require('./templates/list')
 const { build } = require('./engine')
 const { readdirSync, writeFileSync, readFileSync } = require('fs')
+
 const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
   console.log('get')
-  return res.write(readFileSync(`./static/index.html`))
+  res.send(readFileSync(`./static/index.html`).toString())
 })
 
 app.get('/search', (req, res) => {
-  console.log('search')
-  return res.send(404)
+  console.log('search:GET')
+  const output = build()
+  res.send(search_template.render(output.metadata).toString())
+})
+
+app.get('/submit', (req, res) => {
+  console.log('submit:GET')
+  return res.send(submit_template.render().toString())
 })
 
 app.get('/donate', (req, res) => {
@@ -24,13 +33,13 @@ app.get('/donate', (req, res) => {
 app.get('/list', (req, res) => {
   console.log('list')
   const output = build()
-  return res.write(list_template.render(output.metadata))
+  res.send(list_template.render(output.metadata).toString())
 })
 
 app.get('/id/:id', (req, res) => {
   const recipes = readdirSync('./recipes')
   const settings = require(`./recipes/${recipes[parseInt(req.params.id)]}`)
-  return res.send(template.render(settings))
+  res.send(template.render(settings).toString())
 })
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
