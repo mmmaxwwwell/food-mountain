@@ -98,7 +98,6 @@ module.exports = {
               })
               if(!found){
                 selected = false
-                console.log("DQ1", recipe.id)
               }
             }
 
@@ -113,7 +112,6 @@ module.exports = {
                 found = true
               })
               if(!found){
-                console.log("DQ2", recipe.id)
                 selected = false
               }
             })

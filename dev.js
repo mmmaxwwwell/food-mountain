@@ -14,20 +14,15 @@ app.get('/', (req, res) => {
   res.send(readFileSync(`./static/index.html`).toString())
 })
 
+app.get('/about', (req, res) => {
+  console.log('get')
+  res.send(readFileSync(`./static/about.html`).toString())
+})
+
 app.get('/search', (req, res) => {
   console.log('search:GET')
   const output = build()
   res.send(search_template.render(output.metadata).toString())
-})
-
-app.get('/submit', (req, res) => {
-  console.log('submit:GET')
-  return res.send(submit_template.render().toString())
-})
-
-app.get('/donate', (req, res) => {
-  console.log('search')
-  return res.send(404)
 })
 
 app.get('/list', (req, res) => {
