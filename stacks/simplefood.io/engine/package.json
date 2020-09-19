@@ -1,0 +1,28 @@
+{
+  "name": "codename-food-mountain",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npx nodemon ./dev.js",
+    "clean": "rm -rf dist/ && mkdir -p dist",
+    "build": "node build.js",
+    "generate": "npm run clean && npm run build && cp static/* dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmmaxwwwell/codename-food-mountain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmmaxwwwell/codename-food-mountain/issues"
+  },
+  "homepage": "https://github.com/mmmaxwwwell/codename-food-mountain#readme",
+  "dependencies": {
+    "aws-sdk": "^2.695.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

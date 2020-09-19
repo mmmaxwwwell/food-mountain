@@ -1,25 +1,47 @@
 {
-  "name": "codename-food-mountain",
+  "name": "aws_node",
   "version": "1.0.0",
   "description": "",
+  "main": "main.js",
   "scripts": {
-    "build": "node build.js",
-    "dev": "npx nodemon ./dev.js"
+    "simplefood-dev": "exit 0",
+    "deploy-simplefood-dev": "tsc && node dist/main.js simplefood.io dev",
+    "deploy-simplefood-prod": "tsc && node dist/main.js simplefood.io prod",
+    "deploy": "tsc build.ts && node build.js",
+    "watch": "tsc-watch --onSuccess 'node ./dist/main.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mmmaxwwwell/codename-food-mountain.git"
+    "url": "git+https://github.com/mmmaxwwwell/aws_node.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mmmaxwwwell/codename-food-mountain/issues"
+    "url": "https://github.com/mmmaxwwwell/aws_node/issues"
   },
-  "homepage": "https://github.com/mmmaxwwwell/codename-food-mountain#readme",
+  "homepage": "https://github.com/mmmaxwwwell/aws_node#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.3",
+    "@types/express-ws": "^3.0.0",
+    "archiver": "^4.0.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-ws": "^4.0.0",
+    "koa": "^2.11.0",
+    "passport": "^0.4.1",
+    "passport-steam": "^1.0.12",
+    "promisify-child-process": "^4.1.1",
+    "zip-folder": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "@types/node": "^13.9.4",
+    "aws-sdk": "^2.610.0",
+    "cfn": "^1.8.1",
+    "fs": "0.0.1-security",
+    "prettier": "^1.19.1",
+    "tsc-watch": "^4.1.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.9.0-beta"
   }
 }
