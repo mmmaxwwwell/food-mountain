@@ -1,2 +1,1 @@
-# aws_node
- 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4391bacc-0109-497a-8464-26f654c04dcc/deploy-status)](https://app.netlify.com/sites/food-mountain/deploys)
