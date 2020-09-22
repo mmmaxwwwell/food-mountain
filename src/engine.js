@@ -1,11 +1,12 @@
 const recipe_template = require('./templates/recipe')
 const list_template = require('./templates/list')
 const search_template = require('./templates/search')
-const { readdirSync, writeFileSync, mkdirSync} = require('fs')
+const { readdirSync, writeFileSync, mkdirSync, existsSync} = require('fs')
 
 const build = (writeFile = false) => {
-  mkdirSync('./dist')
-  const recipes = readdirSync('./recipes')
+  if(!existsSync('./dist'))
+    mkdirSync('./dist')
+  const recipes = readdirSync('./src/recipes')
   console.log({event:'recipes-list', recipes})
   let id = 0
   let metadata = []

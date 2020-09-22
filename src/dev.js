@@ -11,7 +11,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   console.log('get')
-  res.send(readFileSync(`./static/index.html`).toString())
+  res.send(readFileSync(`./src/static/index.html`).toString())
 })
 
 app.get('/about', (req, res) => {
@@ -32,8 +32,8 @@ app.get('/list', (req, res) => {
   res.send(list_template.render(output.metadata).toString())
 })
 
-app.get('/id/:id', (req, res) => {
-  const recipes = readdirSync('./recipes')
+app.get('/:id', (req, res) => {
+  const recipes = readdirSync('./src/recipes')
   const settings = require(`./recipes/${recipes[parseInt(req.params.id)]}`)
   res.send(template.render(settings).toString())
 })

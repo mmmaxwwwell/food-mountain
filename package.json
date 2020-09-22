@@ -13,10 +13,7 @@
     "url": "git+https://github.com/mmmaxwwwell/food-mountain.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mmmaxwwwell/food-mountain/issues"
-  },
+  "license": "MIT",
   "homepage": "https://github.com/mmmaxwwwell/food-mountain#readme",
   "dependencies": {
     "express": "^4.17.1"
