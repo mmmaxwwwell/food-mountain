@@ -12,7 +12,7 @@ module.exports = {
       <ul>
         ${items.map(item => `
           <li class=browse-recipe>
-          <a href="${item.id}">
+          <a href="${item.id}.html">
             <fieldset>
               <legend>${item.title}</legend>
               <p>${item.description}</p>

@@ -6,7 +6,7 @@
     "dev": "npx nodemon ./src/dev.js",
     "clean": "rm -rf dist/ && mkdir -p dist",
     "build": "node ./src/build.js",
-    "generate": "npm run clean && npm run build && cp static/* dist/"
+    "generate": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",

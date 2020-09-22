@@ -1,7 +1,7 @@
 const recipe_template = require('./templates/recipe')
 const list_template = require('./templates/list')
 const search_template = require('./templates/search')
-const { readdirSync, writeFileSync, mkdirSync, existsSync} = require('fs')
+const { readdirSync, writeFileSync, mkdirSync, existsSync, readFileSync} = require('fs')
 
 const build = (writeFile = false) => {
   if(!existsSync('./dist'))
@@ -29,6 +29,10 @@ const build = (writeFile = false) => {
   if(writeFile){
     writeFileSync('./dist/list.html', listTemplateRendered,)
     writeFileSync('./dist/search.html', searchTemplateRendered)
+    const statics = readdirSync('./src/static')
+    statics.forEach(elem => {
+      writeFileSync(`./dist/${elem}`, readFileSync(`./src/static/${elem}`))
+    })
   }
   
   console.log({event:'build-complete', })
