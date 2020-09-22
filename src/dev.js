@@ -25,10 +25,10 @@ app.get('/search', (req, res) => {
   res.send(search_template.render(output.metadata).toString())
 })
 
-app.get('/list', (req, res) => {
+app.get('/list.html', (req, res) => {
   console.log('list')
   const output = build()
-  console.log(output)
+  // console.log(output)
   res.send(list_template.render(output.metadata).toString())
 })
 
