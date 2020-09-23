@@ -1,5 +1,6 @@
 module.exports = {
   title: "Blackened Black Eyed Pea Soup",
+  slug: 'blackened-black-eyed-pea-soup',
   shortDescription: "Hearty mildly spicy soup reminiscent of mardi gras.",
   description: "Colorful and hearty, this vegan soup will remind you of mardi gras with its corn, peppers, onions and rice. Super easy, using only one cutting board, one bowl and one 6-quart instant pot.",
   ingredients: [

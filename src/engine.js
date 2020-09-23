@@ -8,20 +8,18 @@ const build = (writeFile = false) => {
     mkdirSync('./dist')
   const recipes = readdirSync('./src/recipes')
   console.log({event:'recipes-list', recipes})
-  let id = 0
   let metadata = []
   recipes.forEach(elem => {
     const settings = require(`./recipes/${elem}`)
     if(writeFile)
-      writeFileSync(`./dist/${id}.html`, recipe_template.render(settings))
+      writeFileSync(`./dist/${settings.slug}.html`, recipe_template.render(settings))
     metadata.push({
-      id,
+      slug: settings.slug,
       title: settings.title,
       description: settings.shortDescription,
       ingredients: settings.ingredients,
       tags: settings.tags
     })
-    id++
   })
   const listTemplateRendered = list_template.render(metadata)
   const searchTemplateRendered = search_template.render(metadata)
@@ -35,7 +33,7 @@ const build = (writeFile = false) => {
     })
   }
   
-  console.log({event:'build-complete', })
+  console.log({event:'build-complete'})
 
   return { metadata }
 }
