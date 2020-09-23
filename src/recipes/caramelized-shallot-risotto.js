@@ -1,5 +1,6 @@
 module.exports = {
   title: "Caramelized Shallot Risotto",
+  slug: "caramelized-shallot-risotto",
   shortDescription: "Amazing and filling, plus the ingredients keep for a very long time.",
   description: "This dish takes a bit more time, effort and dishes than most of our others, but its well worth it. Don't skimp on the parmesan.",
   ingredients: [

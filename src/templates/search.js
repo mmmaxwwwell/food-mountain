@@ -19,7 +19,7 @@ module.exports = {
       tags.delete(`${allergen.id}`)
     })
 
-    const metadata = settings.map((elem) => {return {title: elem.title, id: elem.id, description: elem.description, ingredients: elem.ingredients.map(elem2 => elem2.item), tags: elem.tags}})
+    const metadata = settings.map((elem) => {return {title: elem.title, id: elem.slug, description: elem.description, ingredients: elem.ingredients.map(elem2 => elem2.item), tags: elem.tags}})
 
     return `
     <html>
