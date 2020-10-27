@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "npx nodemon ./src/dev.js",
+    "dev": "npx nodemon --legacy-watch ./src/dev.js",
     "clean": "rm -rf dist/ && mkdir -p dist",
-    "build": "node ./src/build.js",
+    "build": "node ./build.js",
     "generate": "npm run clean && npm run build"
   },
   "repository": {
