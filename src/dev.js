@@ -29,6 +29,8 @@ app.get('/list.html', (req, res) => {
 })
 
 app.get('/:slug', (req, res) => {
+  if(req.params.slug == 'favicon.ico')
+    return
   const settings = require(`./recipes/${req.params.slug.replace('.html', '')}.js`)
   res.send(template.render(settings).toString())
 })

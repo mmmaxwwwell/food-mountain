@@ -10,6 +10,7 @@ module.exports = {
       item.tags.forEach(tag => {
         tags.add(tag)
       })
+      
       item.ingredients.forEach(ingredient => {
         ingredients.add(ingredient.item)
       })
