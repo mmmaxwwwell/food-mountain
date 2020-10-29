@@ -2,7 +2,7 @@ module.exports = {
     title: "Wine Poached Mahi Mahi",
     slug: 'wine-poached-mahi-mahi',
     shortDescription: "Fancy presentation with minimal effort. A little on the expensive side, but you won't regret trying this.",
-    description: "We used mahi mahi here because that is what we had around. Any white fish with a neutral flavor will do. This is a great alternative to turkey for a thanksgiving meal.",
+    description: "We used mahi mahi here because that is what we had around. Any white fish with a neutral flavor will do. This is a great pescatarian alternative to turkey for a thanksgiving meal.",
     ingredients: [
       {
         quantity: 2,
@@ -17,7 +17,6 @@ module.exports = {
       },
       {
         quantity: 6,
-        units: 'whole',
         item: 'shallots',
         mods: ['chopped']
       },
