@@ -2,7 +2,7 @@ module.exports = {
     title: "Chana Masala",
     slug: 'chana-masala',
     shortDescription: "Classic Northern Indian dish made without dairy or meat products.",
-    description: "Spicy, vegan, and packed with protein and fiber, this classic dish costs very little and won't disappoint.",
+    description: "Spicy, vegan, packed with protein and fiber, this classic dish costs very little and won't disappoint.",
     ingredients: [
       {
         quantity: 3,
@@ -152,6 +152,8 @@ module.exports = {
       "peanut-free",
       "sugar-free",
       'milk-free',
-      'vegan'
+      'vegan',
+      'vegetarian',
+      'fish-free'
     ]
   }
