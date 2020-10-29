@@ -25,7 +25,7 @@ module.exports = {
       <fieldset id="ingredients" class="widget">
         <legend>Ingredients</legend>
         <ul id="ingredients-ul">
-          ${settings.ingredients.map(elem => `<li class="ingredient">${elem.quantity} ${elem.units} ${elem.item} ${(elem.mods || []).join(', ')} </li>`).join('')}
+          ${settings.ingredients.map(elem => `<li class="ingredient">${elem.quantity}${elem.units ? ` ${elem.units}` : ''} ${elem.item} ${(elem.mods || []).join(', ')} </li>`).join('')}
         </ul>
       </fieldset>
       <fieldset id="instructions" class="widget">

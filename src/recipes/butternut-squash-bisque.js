@@ -1,18 +1,16 @@
 module.exports = {
     title: "Butternut Squash 'Bisque'",
     slug: 'butternut-squash-bisque',
-    shortDescription: "Simple, vegan and full of fall flavors, this is a staple in our house.",
-    description: "With just 3 main ingredients and common spices, this is a family favorite that pairs well with may dishes. Bisque is in quotes because we limit the water content to achieve a similar consistency. It does not contain milk so it is not a true bisque.",
+    shortDescription: "Simple, vegan and full of fall flavors. This is a fall staple in our house.",
+    description: "With just 3 main ingredients and common spices, this is a family favorite that pairs well with many dishes. Bisque is in quotes because we limit the water content to achieve a similar consistency. It does not contain dairy so it is not a true bisque.",
     ingredients: [
       {
         quantity: 1,
-        units: 'whole',
         item: 'butternut squash',
-        mods: ['cubed']
+        mods: ['peeled', 'cubed']
       },
       {
         quantity: 1,
-        units: 'whole',
         item: 'apple',
         mods: ['cubed']
       },
@@ -30,7 +28,7 @@ module.exports = {
       {
         quantity: 2,
         units: 'whole',
-        item: 'cardamum pods',
+        item: 'cardamom pods',
         mods: ['shelled']
       },
       {
@@ -51,8 +49,8 @@ module.exports = {
       },
     ],
     instructions: [
-      "Add butternut squash, apple, bullion and powdered spices to instant pot with enough water to almost cover the ingredients. Add cardamum pods and cloves in a metal tea ball. Pressure cook for 25 mins on high.",
-      "When done, quick vent pressure and remove lid. Use a ladle to remove water until water no longer covers the squash and apple. Remove tea ball. Immersion blend until all the chunks are gone.",
+      "Add butternut squash, apple, bullion and powdered spices to instant pot with enough water to almost cover the ingredients. Put cardamom pods and cloves in a metal tea ball, place tea ball in pressure cooker. Pressure cook for 25 mins on high.",
+      "When done, quick vent pressure and remove lid. Use a ladle to remove water until water level is +1 inch under the squash and apples. Remove tea ball. Immersion blend until all the chunks are gone.",
       "Set instant pot to sauté and bring to a boil to ensure food safety after the immersion blender."
     ],
     equipment:{
@@ -63,7 +61,11 @@ module.exports = {
         },
         {
             name: "Immersion Blender",
-            link: 'https://www.amazon.com/AmazonBasics-Watt-Multi-Speed-Immersion-Blender/dp/B07Q12PJYP/ref=asc_df_B07Q12PJYP'
+            link: 'https://www.amazon.com/AmazonBasics-Watt-Multi-Speed-Immersion-Blender/dp/B07Q12PJYP'
+        },
+        {
+            name: "Tea Ball",
+            link: 'https://www.amazon.com/Stainless-Strainers-Premium-Interval-Seasonings/dp/B08KVY7D49'
         }
       ],
       recommended:[
@@ -80,6 +82,8 @@ module.exports = {
       "sugar-free",
       'milk-free',
       'vegan',
-      'vegetarian'
+      'vegetarian',
+      'tree-nut-free',
+      'fish-free'
     ]
   }
