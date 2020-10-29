@@ -118,9 +118,9 @@ module.exports = {
       },
     ],
     instructions: [
-      "Rehydrate chickpeas, by soaking overnight, or in an instant pot with 3 cups water on high for 50 mins.",
+      "Rehydrate chickpeas by soaking overnight or in an instant pot with 3 cups water on high for 50 mins.",
       "Bring jasmine rice and 1.75 cups water to a boil in a small saucepan, cover, reduce to a low and let cook for 10 mins.",
-      "Add onions, garlic, olive oil and white part of scallions to a large pot and sauté until onions start to caramelize. Add tomatoes, spices, cashews and cooked chickpeas. Stir, cover and reduce to a simmer until rice is ready, or 10 mins.",
+      "Add onions, garlic, olive oil and white part of scallions to a large pot and sauté until onions start to caramelize. Add tomatoes, spices, cashews, cooking wine and cooked chickpeas. Stir, cover and reduce to a simmer until rice is ready, or 10 mins.",
       "Serve over rice, garnish with green portion of scallions and pistachios."
     ],
     equipment:{
