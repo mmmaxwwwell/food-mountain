@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Mom's Banana Bread",
+  title: "Banana Bread",
   slug: 'banana-bread',
   shortDescription: "You need to try this luxurious banana bread. A real crowd pleaser, great for parties.",
   description: "This is some of the most delicious banana bread I've ever experienced. The way the top cracks when baking screams tasty, and it won't let you down. Best of all, you have a use for those brown bananas. Just freeze them one by one until you have a few in your freezer. The browner the better and the sweeter the bread will be.",
